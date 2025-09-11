@@ -18,7 +18,7 @@ export default function StatusPage() {
 
 function UpdatedAt() {
   const { isLoading, data } = useSWR("/api/v1/status", fetchAPI, {
-    refreshInterval: 20000,
+    refreshInterval: 2000,
   });
 
   let updatedAtText = "Carregando...";
@@ -32,7 +32,7 @@ function UpdatedAt() {
 
 function DatabaseStatus() {
   const { isLoading, data } = useSWR("/api/v1/status", fetchAPI, {
-    refreshInterval: 20000,
+    refreshInterval: 2000,
   });
 
   let databaseStatusInformation = "Carregando...";
